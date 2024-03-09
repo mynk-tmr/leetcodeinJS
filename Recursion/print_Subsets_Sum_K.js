@@ -1,4 +1,8 @@
-var subarraySum = function (nums, k) {
+//print subsets summing to 5, ans. [[ 2, 3 ], [ 1, 4 ]]
+
+console.log(subarraySum([4, 3, 1, 2], 5));
+
+function subarraySum(nums, k) {
   let set = [];
   solve();
   return set;
@@ -14,6 +18,4 @@ var subarraySum = function (nums, k) {
     //ignore i
     solve(i - 1, subsoln, target);
   }
-};
-
-console.log(subarraySum([4, 3, 1, 2], 5));
+}
